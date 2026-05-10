@@ -3,12 +3,43 @@
 ## Table of Contents
 - <a href="#overview">Project Overview</a>
 - <a href="#business-objectives">Business Objectives</a>
-- <a href="data-sources">Data Sources</a>
-- <a href="eda">Exploratory Data Analysis</a>
-- <a href="how-to-run-this-project">How to Run this Project</a>
-- <a href="author-contact">Author & Contact</a>
+- <a href="#data-sources">Data Sources</a>
+- <a href="#eda">Exploratory Data Analysis</a>
+- <a href="#models-used">Models Used</a>
+- <a href="#metrics">Evaluation Metrics</a>
+- <a href="#application">Application</a>
+- <a href="#project-structure">Project Structure</a>
+- <a href="#how-to-run-this-project">How to Run this Project</a>
+- <a href="#author--contact">Author & Contact</a>
 
 --- 
+<h2><a class="anchor" id="overview"></a>Project Overview</h2>
+
+---
+<h2><a class="anchor" id="business-objectives"></a>Business Objectives</h2>
+
+---
+<h2><a class="anchor" id="data-sources"></a>Data Sources</h2>
+
+---
+<h2><a class="anchor" id="eda"></a>Exploratory Data Analysis</h2>
+
+----
+<h2><a class="anchor" id="models-used"></a>Models Used</h2>
+
+---
+<h2><a class="anchor" id="metrics"></a>Evaluation Metrics</h2>
+
+---
+<h2><a class="anchor" id="application"></a>Application</h2>
+
+---
+<h2><a class="anchor" id="how-to-run-this-project"></a>Project Structure</h2>
+
+---
+<h2><a class="anchor" id="project-structure"></a>How to Run this Project</h2>
+
+---
 <h2><a class="anchor" id="author--contact"></a>Author & Contact</h2>
  
 **Amna Rishvi**  
