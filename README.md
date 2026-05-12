@@ -27,6 +27,18 @@
 ----
 <h2><a class="anchor" id="models-used"></a>Models Used</h2>
 
+# Regression (Freight Prediction)
+- Linear Regression (baseline)
+- Decision Tree Regressor
+- Random Forest Regressor (final model)
+
+# Classification (Invoice Flagging)
+- Logistic Regression(baseline)
+- Decision Tree Classifier
+- Random Forest Classifier (final model with GridSearchCV)
+
+Hyperparameter tuning is performed using GridSearchCV with F1-score to handle class imbalance.
+
 ---
 <h2><a class="anchor" id="metrics"></a>Evaluation Metrics</h2>
 
