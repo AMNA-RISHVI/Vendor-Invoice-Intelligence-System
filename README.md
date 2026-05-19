@@ -26,6 +26,7 @@ Data is sorted in a relational SQLite database (inventory.db) with the following
 - purchases - Item-level purchase details
 - purchase_prices - Reference purchase prices
 - begin_inventory, end_inventory - Inventory snapshots
+  
 SQL aggregation is used to generate invoice-level features.
 
 ---
