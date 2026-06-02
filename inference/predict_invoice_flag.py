@@ -4,8 +4,8 @@ import numpy as np
 import os
 
 # --- ABSOLUTE PATHS ---
-MODEL_PATH = r"E:\ml project\models\predict_flag_invoice.pkl"
-SCALER_PATH = r"E:\ml project\models\scaler.pkl"
+MODEL_PATH = "models/predict_flag_invoice.pkl"
+SCALER_PATH = "models/scaler.pkl"
 
 def load_artifacts():
     """Helper to load the model and scaler once."""
