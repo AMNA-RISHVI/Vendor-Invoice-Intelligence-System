@@ -130,7 +130,7 @@ if app_mode == "Freight Prediction":
             input_df = input_df.reindex(columns=expected_cols, fill_value=0)
 
             # ✅ Load scaler
-            freight_scaler = joblib.load("models/freight_scaler.pkl")
+            freight_scaler = joblib.load("models/scaler.pkl")
 
             # ✅ Scale input
             scaled_values = freight_scaler.transform(input_df)
