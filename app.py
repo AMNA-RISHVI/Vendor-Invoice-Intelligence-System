@@ -3,6 +3,9 @@ import pandas as pd
 from inference.predict_freight import predict_freight_cost
 from inference.predict_invoice_flag import predict_invoice_flag 
 from inference.predict_freight import load_model as load_freight_model
+import joblib
+
+freight_scaler = joblib.load("models/freight_scaler.pkl")
 
 # --- UI CONFIG ---
 st.set_page_config(page_title="Vendor Invoice Intelligence Portal", page_icon="🧾", layout="wide")
@@ -126,8 +129,17 @@ if app_mode == "Freight Prediction":
             # CRITICAL FIX: match model features
             input_df = input_df.reindex(columns=expected_cols, fill_value=0)
 
-            # Now call your function
-            result_df = predict_freight_cost(input_df.to_dict(orient="list"))
+            # ✅ Load scaler
+            freight_scaler = joblib.load("models/freight_scaler.pkl")
+
+            # ✅ Scale input
+            scaled_values = freight_scaler.transform(input_df)
+
+            # Convert back to DataFrame (keep column names)
+            scaled_df = pd.DataFrame(scaled_values, columns=input_df.columns)
+
+            # ✅ Now call prediction with scaled data
+            result_df = predict_freight_cost(scaled_df.to_dict(orient="list"))
 
             if result_df is not None:
                 prediction = result_df['Predicted_Freight'].iloc[0]
