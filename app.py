@@ -5,7 +5,7 @@ from inference.predict_invoice_flag import predict_invoice_flag
 from inference.predict_freight import load_model as load_freight_model
 import joblib
 
-freight_scaler = joblib.load("models/freight_scaler.pkl")
+freight_scaler = joblib.load("models/scaler.pkl")
 
 # --- UI CONFIG ---
 st.set_page_config(page_title="Vendor Invoice Intelligence Portal", page_icon="🧾", layout="wide")
