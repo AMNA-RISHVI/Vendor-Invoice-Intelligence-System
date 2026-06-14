@@ -104,11 +104,17 @@ st.divider()
 
 if app_mode == "Freight Prediction":
     st.subheader("📦 Forecast Freight Expenditure")
+
     col1, col2 = st.columns(2)
+
     with col1:
-        quantity = st.number_input("Item Quantity", min_value=1, value=10)
+        quantity = st.number_input("Invoice Quantity", min_value=1, value=10)
+        freight = st.number_input("Freight ($)", min_value=0.0, value=20.0)
+        item_qty = st.number_input("Total Item Quantity", min_value=1, value=10)
+
     with col2:
-        dollars = st.number_input("Invoice Total ($)", min_value=1.0, value=500.0)
+        dollars = st.number_input("Invoice Dollars ($)", min_value=1.0, value=500.0)
+        item_dlrs = st.number_input("Total Item Dollars ($)", min_value=1.0, value=480.0)
 
     if st.button("✨ Calculate Expected Freight"):
 
@@ -120,14 +126,14 @@ if app_mode == "Freight Prediction":
             # Create base input
             input_dict = {
                 "invoice_quantity": quantity,
-                "invoice_dollars": dollars
+                "invoice_dollars": dollars,
+                "Freight": freight,
+                "total_item_quantity": item_qty,
+                "total_item_dollars": item_dlrs
             }
 
             # Convert to DataFrame
             input_df = pd.DataFrame([input_dict])
-
-            # CRITICAL FIX: match model features
-            input_df = input_df.reindex(columns=expected_cols, fill_value=0)
 
             # ✅ Load scaler
             freight_scaler = joblib.load("models/scaler.pkl")
